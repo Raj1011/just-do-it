@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Insert title here</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<script type="text/javascript" src="js/paper-full.min.js"></script>
+	<script type="text/javascript" src="js/paper-core.min.js"></script>
+	<script type="text/javascript" canvas="myCanvas">
+	var path = new Path.Rectangle({
+	point: [75, 75],
+	size: [75, 75],
+	strokeColoe: 'black'
+});
+
+function onFrame(event) {
+	// Each frame, rotate the path by 3 degrees:
+	path.rotate(3);
+}
+</script>
+</head>
+<body ng-app="">
+	<div class="container-fluid">
+		<div ng-include="'header.html'"></div>
+		<hr>
+		<div id="main" class="mbottom15">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<img alt="" ng-click="" ng-src="img/blackbird.jpg" class="theme-icons">
+					<img alt="" ng-click="" ng-src="img/starwars.jpg" class="theme-icons">
+					<img alt="" ng-click="" ng-src="img/oneday.jpg" class="theme-icons">
+					<img alt="" ng-click="" ng-src="img/orchestra.png" class="theme-icons">
+					
+					<div align="center" class="mtop15">
+						<p style="color: white;">Please choose the theme <span class="caret caret-dropup"></span> and click the play icon</p>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8" style="display: inline-block;">
+					<div class="home-sidebar col-md-4">
+						<!-- <md-icon md-svg-src = 'img/favorite.svg'></md-icon> -->
+						<img alt="" ng-src="img/star-icon.jpg" class="side-icon">
+						<img alt="" ng-src="img/pentagnn-icon.jpg" class="side-icon">
+						<img alt="" ng-src="img/circle-icon.jpg" class="side-icon">
+						<img alt="" ng-src="img/trngle-icon.jpg" class="side-icon">
+						<img alt="" ng-src="img/star-icon.jpg" class="side-icon">
+						<img alt="" ng-src="img/pentagnn-icon.jpg" class="side-icon">
+						<img alt="" ng-src="img/circle-icon.jpg" class="side-icon">
+						<img alt="" ng-src="img/trngle-icon.jpg" class="side-icon">
+					</div>
+					<div class="dotted-circle col-md-8">
+						<canvas id="myCanvas" resize></canvas>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+		<hr>
+		<div ng-include="'footer.html'"></div>
+	</div>
+</body>
+</html>
