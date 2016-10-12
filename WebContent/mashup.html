@@ -1,10 +1,65 @@
-<div class="row">
-	<div class="col-md-5 col-sm-5 col-xs-5">Part A</div>
-	<div class="col-md-2 col-sm-2 col-xs-2">Volume controller, Beats, etc</div>
-	<div class="col-md-5 col-sm-5 col-xs-5">Part B</div>
+<div class="border-design row" ng-controller="audioController">
+	<div align="center" class="border-design-synth">
+		<h3 class="song_title">Synthesizer</h3>
+	</div>
+	<div class="row row_margin">
+		<div class="col-md-5 col-sm-5 col-xs-5 border-design-synth padding_AB">
+			<div class="col-md-3 col-sm-3 col-xs-3" align="center"><img alt="" ng-src="img/vol_control.jpg"></div>
+			<div class="col-md-9 col-sm-9 col-xs-8" >
+				<div class="part_AB_bg" style="background-image: url('img/part_AB.jpg');">
+					<h4 class="song_title">{{songA_title}}</h4>
+					<h5 class="song_singer">{{songA_singer}}</h5>
+					<p class="song_title">{{songA.currentTime}}:0 / 5:00</p>
+				</div>
+				<div align="center" class="border-design-synth">
+					<a ng-click='songA.play()' class="btn btn-default">Play</a>
+					<a ng-click='songA.pause()' class="btn btn-default">Pause</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-2 border-design-synth" style="padding: 0px;">
+			<img alt="" ng-src="img/recorder.jpg" width="190px;">
+		</div>
+		<div class="row row_margin col-md-5 col-sm-5 col-xs-5 border-design-synth padding_AB">
+			<div class="col-md-9 col-sm-9 col-xs-8">
+				<div class="part_AB_bg" style="background-image: url('img/part_AB.jpg');">
+					<h4 class="song_title">{{songB_title}}</h4>
+					<h5 class="song_singer">{{songB_singer}}</h5>
+					<p class="song_title">{{songB.currentTime}}:0 / 5:00</p>
+				</div>
+				<div align="center" class="border-design-synth">
+					<a ng-click='songA.play()' class="btn btn-default">Play</a>
+					<a ng-click='songA.pause()' class="btn btn-default">Pause</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-3" align="center"><img alt="" ng-src="img/vol_control.jpg"></div>
+		</div>
+	</div>
 </div>
 	
-<div class="row">
-	<div class="col-md-4 col-sm-4 col-xs-4">Sons Indexing</div>
-	<div class="col-md-8 col-md-4 col-xs-4">Songs Listing</div>
+<div class="row mtop15" ng-controller="audioController">
+	<div class="border-design col-md-3 col-sm-3 col-xs-5" >
+		<div>
+			<h4 class="song_title">Music Folder</h4>
+			<div style="margin-left: 15px;">
+				<h5 ng-repeat='s in songs'><a ng-click="selectSongList(s.type)" class="song_type">{{s.type}}</a></h5>
+			</div>
+		</div>
+		<div class="song_title"><h4>Recordings</h4></div>
+		<div class="song_title"><h4>Sampler</h4></div>
+		<div class="song_title"><h4>Setting</h4></div>
+		
+		<!-- <h1 ng-repeat='s in songs'><a ng-click="selectSongList(s.type)">{{s.type}}</a></h1> -->
+	</div>
+	<div class="border-design col-md-9 col-md-9 col-xs-7">
+		<table class="table">
+			<tbody>
+				<tr ng-repeat="s in selectedSongList">
+					<td><a class="btn btn-default" ng-click="play_A(s.title,selectedSongList)">A</a><a class="btn btn-default" ng-click="play_B(s.path)">B</a></td>
+					<td class="song_singer">{{s.singer}}</td>
+					<td class="song_title">{{s.title}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>

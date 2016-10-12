@@ -1,0 +1,27 @@
+.border-design{
+	    border: 4px solid black;
+}
+.border-design-synth{
+	    border: 1px solid #4c4b4b;
+}
+.song_title{
+	color:white;
+}
+.song_singer{
+	color:orange;
+}
+
+.row_margin{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.padding_AB{
+	    padding: 10px;
+}
+.part_AB_bg{
+	background-image: url("img/part_AB.jpg");
+	border: 3px solid #080808;
+    margin-bottom: 10px;
+}
+}
+

@@ -179,23 +179,30 @@ angular.module('themeManagement').controller("themeController",['$scope','ngAudi
 }]);
 
 
-angular.module('themeManagement').controller('audioController')['$scope','ngAudio',function($scope,ngAudio){
+angular.module('themeManagement').controller('audio1Controller')['$scope','ngAudio',function($scope,ngAudio){
 	$scope.songs=[{
 		'name':'Years  (Vocal Extended Mix)',
 		'singer':'Alesso',
-		'path':'/resources/Alesso feat. Matthew Koma - Years  (Vocal Extended Mix) (320  kbps).mp3'
+		'path':'/resources/english/Alesso feat. Matthew Koma - Years  (Vocal Extended Mix) (320  kbps).mp3'
 	},
 	{
 		'name':'What a wonderful world',
 		'singer':'Axwell and Bib Sinclar',
-		'path':'/resources/Bob+Sinclar-2C+Axwell+-26amp-3B+Ron+Carroll+-+-26-23039-3BWhat+a+Wonderful+World-26-23039-3B+Official+Music+Video.mp3'
+		'path':'/resources/english/Bob+Sinclar-2C+Axwell+-26amp-3B+Ron+Carroll+-+-26-23039-3BWhat+a+Wonderful+World-26-23039-3B+Official+Music+Video.mp3'
 	},{
 		'name':'Sexy Bitch(HQ)',
 		'singer':'David Guetta ft. Akon',
-		'path':'/resources/David Guetta ft Akon - Sexy Bitch (HQ).mp3'
+		'path':'/resources/english/David Guetta ft Akon - Sexy Bitch (HQ).mp3'
 	},{
 		'name':'Hold that Sucker Down',
 		'singer':'David Vendetta',
-		'path':'/resources/OT.+Quartet+-+Hold+that+sucker+down.mp3'
+		'path':'/resources/english/OT.+Quartet+-+Hold+that+sucker+down.mp3'
 	}]
+	
+	$scope.play_A(title){
+		
+	}
+	$scope.play_B(title){
+		
+	}
 }];

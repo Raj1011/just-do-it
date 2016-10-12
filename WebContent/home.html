@@ -7,11 +7,13 @@
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/mashup.css">
 	<script type="text/javascript" src="js/lib/paper-full.min.js"></script>
 	<script type="text/javascript" src="js/lib/paper-core.min.js"></script>
 	<script type="text/javascript" src="js/lib/angular.audio.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+	
 </head>
 <body ng-app="themeManagement">
 	<div class="container-fluid">
@@ -23,10 +25,10 @@
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
-				<a ><img alt="" ng-src="img/blackbird.jpg" class="theme-icons"></a>
-				<a ><img alt="" ng-src="img/starwars.jpg" class="theme-icons"></a>
-				<a ><img alt="" ng-src="img/oneday.jpg" class="theme-icons"></a>
-				<a ><img alt=""  ng-src="img/orchestra.png" class="theme-icons"></a>
+				<a ui-sref="soundMixer" ><img alt="" ng-src="img/blackbird.jpg" class="theme-icons"></a>
+				<a ui-sref="soundMixer"><img alt="" ng-src="img/starwars.jpg" class="theme-icons"></a>
+				<a ui-sref="mashup"><img alt="" ng-src="img/oneday.jpg" class="theme-icons"></a>
+				<a ui-sref="mashup"><img alt=""  ng-src="img/orchestra.png" class="theme-icons"></a>
 			</div>
 			<div class="col-md-3"></div>
 		</div>
